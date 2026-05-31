@@ -6,14 +6,22 @@ import { Services } from "@/components/bbc/Services";
 import { Values } from "@/components/bbc/Values";
 import { Gallery } from "@/components/bbc/Gallery";
 import { Contact } from "@/components/bbc/Contact";
+import { FloatingWhatsApp } from "@/components/bbc/FloatingWhatsApp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Beauty by Camille — Institut beauté & bien-être sur mesure" },
-      { name: "description", content: "Institut de beauté et bien-être : extensions de cils, sourcils, soins du visage, massages et manucure. Une approche personnalisée pour révéler votre beauté naturelle." },
+      {
+        name: "description",
+        content:
+          "Institut de beauté et bien-être : extensions de cils, sourcils, soins du visage, massages et manucure. Une approche personnalisée pour révéler votre beauté naturelle.",
+      },
       { property: "og:title", content: "Beauty by Camille — Institut beauté & bien-être" },
-      { property: "og:description", content: "La beauté sur mesure, au service de votre bien-être." },
+      {
+        property: "og:description",
+        content: "La beauté sur mesure, au service de votre bien-être.",
+      },
     ],
   }),
   component: Index,
@@ -29,6 +37,7 @@ function Index() {
       <Values />
       <Gallery />
       <Contact />
+      <FloatingWhatsApp />
     </main>
   );
 }

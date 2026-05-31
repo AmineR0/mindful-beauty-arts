@@ -1,27 +1,56 @@
-import hero from "@/assets/bbc/salon.jpg";
+import { Instagram } from "lucide-react";
+import hero from "@/assets/bbc/hero.jpg";
+import { WhatsAppIcon } from "@/components/bbc/WhatsAppIcon";
+import { instagramUrl, whatsappUrl } from "@/lib/contact";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen w-full overflow-hidden">
-      <img src={hero} alt="Institut Beauty by Camille" className="absolute inset-0 h-full w-full object-cover" />
+    <section id="top" className="relative min-h-screen min-h-[100svh] w-full overflow-hidden">
+      <img
+        src={hero}
+        alt="Institut Beauty by Camille"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/30 to-foreground/70" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-20 pt-40 md:px-12 md:pb-28">
-        <div className="max-w-3xl">
-          <p className="tracking-luxe text-[11px] uppercase text-background/80 mb-6">— Institut Beauté & Bien-être</p>
-          <h1 className="font-display text-5xl leading-[0.95] text-background md:text-7xl lg:text-8xl text-balance">
-            Révélez votre <span className="font-script">beauté</span><br />
-            naturelle.
-          </h1>
-          <p className="mt-8 max-w-xl text-base md:text-lg font-light text-background/90 leading-relaxed">
-            Chez Beauty by Camille, chaque prestation est pensée sur mesure pour sublimer votre beauté extérieure tout en nourrissant votre bien-être intérieur.
+      <div className="relative z-10 mx-auto flex min-h-screen min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-12 pt-32 sm:px-6 md:justify-end md:px-12 md:pb-28 md:pt-40">
+        <div className="max-w-xs -translate-y-4 sm:max-w-3xl md:translate-y-0">
+          <p className="tracking-luxe text-[10px] uppercase text-background/80 mb-5 sm:text-[11px] md:mb-6">
+            — Institut Beauté & Bien-être
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a href="#contact" className="tracking-luxe text-[11px] uppercase bg-background text-foreground px-8 py-4 hover:bg-rose-soft transition-colors">
-              Prendre rendez-vous
+          <h1 className="font-display text-4xl leading-[0.98] text-background sm:text-5xl md:text-7xl lg:text-8xl text-balance">
+            Révélez votre
+            <br />
+            <span className="font-script">beauté</span> naturelle.
+          </h1>
+          <p className="mt-6 max-w-xl text-base md:mt-8 md:text-lg font-light text-background/90 leading-relaxed">
+            Chez Beauty by Camille, chaque prestation est pensée sur mesure pour sublimer votre
+            beauté extérieure tout en nourrissant votre bien-être intérieur.
+          </p>
+          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center md:mt-10">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-full max-w-full items-center justify-center gap-2 bg-background px-6 py-4 text-center tracking-luxe text-[10px] uppercase text-foreground transition-colors hover:bg-rose-soft sm:w-auto sm:text-[11px]"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              Réserver WhatsApp
             </a>
-            <a href="#prestations" className="tracking-luxe text-[11px] uppercase text-background border-b border-background/60 pb-1 hover:border-background transition-colors">
+            <a
+              href="#prestations"
+              className="tracking-luxe text-[10px] uppercase text-background border-b border-background/60 pb-1 transition-colors hover:border-background sm:text-[11px]"
+            >
               Découvrir nos soins
+            </a>
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 tracking-luxe text-[10px] uppercase text-background border-b border-background/60 pb-1 transition-colors hover:border-background sm:text-[11px]"
+            >
+              <Instagram className="h-4 w-4" aria-hidden="true" />
+              Instagram
             </a>
           </div>
         </div>
