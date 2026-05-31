@@ -45,7 +45,7 @@ export function About() {
 
           <div className="mt-14 grid grid-cols-3 gap-8 max-w-lg">
             {[
-              ["+8", "ans d'expertise"],
+              ["+10", "ans d'expertise"],
               ["100%", "sur mesure"],
               ["★ 4.9", "satisfaction"],
             ].map(([n, l]) => (
