@@ -1,16 +1,25 @@
-import img from "@/assets/bbc/spa.jpg";
+import salon from "@/assets/bbc/salon.jpg";
+import spa from "@/assets/bbc/spa.jpg";
+import img1 from "@/assets/bbc/img1.jpg";
+import img4 from "@/assets/bbc/img4.jpg";
+
+const salonImages = [salon, spa, img1, img4];
 
 export function About() {
   return (
     <section id="about" className="relative bg-background py-20 md:py-32 bg-grain">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12 md:gap-20 md:px-12">
         <div className="md:col-span-5">
-          <div className="relative">
-            <img
-              src={img}
-              alt="Cabine de soin"
-              className="w-full h-[520px] md:h-[640px] object-cover"
-            />
+          <div className="relative overflow-hidden h-[520px] md:h-[640px]">
+            {salonImages.map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt="Salon Beauty by Camille"
+                className="salon-slide absolute inset-0 h-full w-full object-cover"
+                style={{ animationDelay: `${index * 4}s` }}
+              />
+            ))}
             <div className="absolute -bottom-8 -right-8 hidden md:block bg-primary p-8 max-w-[260px] text-background">
               <p className="font-script text-3xl text-rose leading-tight">
                 « La beauté sur mesure »

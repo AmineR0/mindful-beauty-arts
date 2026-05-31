@@ -121,4 +121,18 @@
     width: 1px;
     background: linear-gradient(180deg, transparent, var(--color-border), transparent);
   }
+  .salon-slide {
+    opacity: 0;
+    animation: salon-fade 16s infinite;
+  }
+  @keyframes salon-fade {
+    0%,
+    22% {
+      opacity: 1;
+    }
+    28%,
+    100% {
+      opacity: 0;
+    }
+  }
 }

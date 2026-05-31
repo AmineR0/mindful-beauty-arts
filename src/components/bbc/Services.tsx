@@ -1,6 +1,5 @@
 const categories = [
   {
-    n: "01",
     title: "Beauté du regard",
     intro: "Extensions, rehaussement et teinture pour un regard sublimé.",
     items: [
@@ -13,7 +12,6 @@ const categories = [
     ],
   },
   {
-    n: "02",
     title: "Beauté des sourcils",
     intro: "L'art de structurer la ligne du regard.",
     items: [
@@ -25,7 +23,6 @@ const categories = [
     ],
   },
   {
-    n: "03",
     title: "Soins du visage",
     intro: "Des protocoles personnalisés pour révéler l'éclat naturel.",
     items: [
@@ -37,7 +34,6 @@ const categories = [
     ],
   },
   {
-    n: "04",
     title: "Massages & Bien-être",
     intro: "Une parenthèse de douceur pour le corps et l'esprit.",
     items: [
@@ -48,7 +44,6 @@ const categories = [
     ],
   },
   {
-    n: "05",
     title: "Beauté des mains",
     intro: "Mains soignées, ongles raffinés.",
     items: [
@@ -78,27 +73,28 @@ export function Services() {
 
         <div className="space-y-px border-y border-background/20 bg-background/20">
           {categories.map((cat) => (
-            <article key={cat.n} className="group bg-primary transition-colors hover:bg-accent">
-              <div className="grid grid-cols-12 gap-6 px-2 md:px-8 py-10 md:py-14">
-                <div className="col-span-12 md:col-span-1 font-display text-2xl text-rose">
-                  {cat.n}
-                </div>
-                <div className="col-span-12 md:col-span-4">
-                  <h3 className="font-display text-3xl md:text-4xl text-background leading-tight">
+            <article key={cat.title} className="group bg-primary transition-colors hover:bg-accent">
+              <div className="px-3 py-12 text-center md:px-10 md:py-16">
+                <div className="mx-auto max-w-3xl">
+                  <h3 className="font-display text-4xl font-semibold leading-tight text-background md:text-6xl">
                     {cat.title}
                   </h3>
-                  <p className="mt-4 text-sm text-background/70 font-light max-w-xs">{cat.intro}</p>
+                  <p className="mx-auto mt-4 max-w-md text-sm font-light text-background/74 md:text-base">
+                    {cat.intro}
+                  </p>
                 </div>
-                <div className="col-span-12 md:col-span-7">
+                <div className="mx-auto mt-8 max-w-4xl md:mt-10">
                   <ul className="divide-y divide-background/18">
                     {cat.items.map(([name, desc]) => (
                       <li
                         key={name}
-                        className="py-4 flex flex-col md:flex-row md:items-baseline md:justify-between gap-2"
+                        className="flex flex-col items-center gap-3 py-5 text-center md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:text-left"
                       >
-                        <div className="md:max-w-[60%]">
-                          <p className="font-display text-xl text-background">{name}</p>
-                          <p className="text-sm text-background/68 font-light mt-1">{desc}</p>
+                        <div className="max-w-xl md:max-w-none">
+                          <p className="font-display text-2xl font-semibold leading-tight text-background md:text-3xl">
+                            {name}
+                          </p>
+                          <p className="mt-2 text-sm font-light text-background/68">{desc}</p>
                         </div>
                         <span className="tracking-luxe text-[10px] uppercase text-rose">
                           Sur rendez-vous
