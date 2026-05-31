@@ -12,7 +12,7 @@ const values = [
 
 export function Values() {
   return (
-    <section id="values" className="relative bg-background py-24 md:py-36">
+    <section id="values" className="relative bg-background py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-12 md:gap-20">
           <div className="md:col-span-5 md:sticky md:top-24 self-start">
@@ -22,7 +22,8 @@ export function Values() {
             </h2>
             <div className="hairline my-10 max-w-xs" />
             <p className="text-muted-foreground font-light leading-relaxed max-w-md">
-              Nous croyons en une beauté qui prend son temps. Une beauté qui écoute, qui répare, qui célèbre. Chez nous, le luxe n'est pas dans l'ostentation — il est dans l'attention.
+              Nous croyons en une beauté qui prend son temps. Une beauté qui écoute, qui répare, qui
+              célèbre. Chez nous, le luxe n'est pas dans l'ostentation — il est dans l'attention.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-4">
               <img src={img1} alt="" className="aspect-[3/4] object-cover w-full" />
@@ -30,13 +31,20 @@ export function Values() {
             </div>
           </div>
 
-          <ul className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-border self-start">
+          <ul className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-primary/25 self-start">
             {values.map(([t, d], i) => (
-              <li key={t} className="bg-background p-8 md:p-10 min-h-[220px] flex flex-col justify-between">
+              <li
+                key={t}
+                className="bg-card p-8 md:p-10 min-h-[220px] flex flex-col justify-between"
+              >
                 <span className="tracking-luxe text-[10px] uppercase text-accent">0{i + 1}</span>
                 <div>
-                  <h3 className="font-display text-2xl md:text-3xl text-foreground leading-tight">{t}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground font-light leading-relaxed">{d}</p>
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground leading-tight">
+                    {t}
+                  </h3>
+                  <p className="mt-3 text-sm text-muted-foreground font-light leading-relaxed">
+                    {d}
+                  </p>
                 </div>
               </li>
             ))}

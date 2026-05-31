@@ -5,7 +5,7 @@ import { businessAddress, instagramUrl, whatsappUrl } from "@/lib/contact";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative bg-foreground text-background py-24 md:py-36">
+    <section id="contact" className="relative bg-primary text-background py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-7">
@@ -24,7 +24,7 @@ export function Contact() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 bg-background px-6 py-4 text-center tracking-luxe text-[10px] uppercase text-foreground transition-colors hover:bg-rose-soft sm:w-auto sm:text-[11px]"
+                className="inline-flex w-full items-center justify-center gap-2 bg-background px-6 py-4 text-center tracking-luxe text-[10px] font-semibold uppercase text-primary transition-colors hover:bg-rose-soft sm:w-auto sm:text-[11px]"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 Réserver sur WhatsApp
@@ -77,7 +77,10 @@ export function Contact() {
           <img
             src={logo}
             alt="Beauty by Camille"
-            className="h-28 w-44 object-contain md:h-32 md:w-52"
+            className="h-32 w-52 object-contain md:h-36 md:w-56"
+            style={{
+              filter: "brightness(0) invert(1) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35))",
+            }}
           />
           <p className="tracking-luxe uppercase text-[10px]">
             La beauté sur mesure, au service de votre bien-être

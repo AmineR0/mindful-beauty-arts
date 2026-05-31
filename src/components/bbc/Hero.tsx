@@ -9,30 +9,31 @@ export function Hero() {
       <img
         src={hero}
         alt="Institut Beauty by Camille"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-[60%_center] sm:object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/30 to-foreground/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/52 to-primary/90" />
+      <div className="absolute inset-y-0 left-0 w-full bg-[linear-gradient(90deg,oklch(0.25_0.065_26/.92)_0%,oklch(0.25_0.065_26/.68)_38%,transparent_78%)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-12 pt-32 sm:px-6 md:justify-end md:px-12 md:pb-28 md:pt-40">
-        <div className="max-w-xs -translate-y-4 sm:max-w-3xl md:translate-y-0">
-          <p className="tracking-luxe text-[10px] uppercase text-background/80 mb-5 sm:text-[11px] md:mb-6">
+      <div className="relative z-10 mx-auto flex min-h-screen min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-10 pt-28 sm:px-6 md:justify-end md:px-12 md:pb-24 md:pt-40">
+        <div className="max-w-[21rem] -translate-y-6 sm:max-w-3xl md:translate-y-0">
+          <p className="tracking-luxe text-[10px] uppercase text-background/80 mb-4 sm:text-[11px] md:mb-6">
             — Institut Beauté & Bien-être
           </p>
-          <h1 className="font-display text-4xl leading-[0.98] text-background sm:text-5xl md:text-7xl lg:text-8xl text-balance">
+          <h1 className="font-display text-[2.75rem] leading-[0.94] text-background drop-shadow-sm sm:text-5xl md:text-7xl lg:text-8xl text-balance">
             Révélez votre
             <br />
             <span className="font-script">beauté</span> naturelle.
           </h1>
-          <p className="mt-6 max-w-xl text-base md:mt-8 md:text-lg font-light text-background/90 leading-relaxed">
+          <p className="mt-5 max-w-xl text-[15px] md:mt-8 md:text-lg font-light text-background/90 leading-relaxed">
             Chez Beauty by Camille, chaque prestation est pensée sur mesure pour sublimer votre
             beauté extérieure tout en nourrissant votre bien-être intérieur.
           </p>
-          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center md:mt-10">
+          <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center md:mt-10">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-full max-w-full items-center justify-center gap-2 bg-background px-6 py-4 text-center tracking-luxe text-[10px] uppercase text-foreground transition-colors hover:bg-rose-soft sm:w-auto sm:text-[11px]"
+              className="inline-flex w-full max-w-full items-center justify-center gap-2 border border-background bg-background px-6 py-4 text-center tracking-luxe text-[10px] font-semibold uppercase text-primary transition-colors hover:bg-rose-soft sm:w-auto sm:text-[11px]"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Réserver WhatsApp
