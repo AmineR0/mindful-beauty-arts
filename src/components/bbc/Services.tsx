@@ -43,15 +43,6 @@ const categories = [
       ["Rituel bien-être", "Harmonisez le corps et l'esprit."],
     ],
   },
-  {
-    title: "Beauté des mains",
-    intro: "Mains soignées, ongles raffinés.",
-    items: [
-      ["Manucure", "Des mains élégantes au quotidien."],
-      ["Soin complet", "Hydratation, nutrition et embellissement."],
-      ["Mise en beauté des ongles", "Pour des ongles impeccables."],
-    ],
-  },
 ];
 
 export function Services() {
